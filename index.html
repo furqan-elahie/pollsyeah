@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/furqanel1/demotest@main/index.css">
+    <title>Polls </title>
+    <script src="https://cdn.jsdelivr.net/gh/furqanel1/demotest@main/hmac-sha256.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/furqanel1/demotest@main/intro.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/furqanel1/demotest@main/c9705384ae.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/furqanel1/demotest@main/index.js"></script>
+  </head>
+  <body>
+    <div class="login_signup">
+      <div class="at_top_login">
+        <span>Polls Yeah!</span>
+      </div>
+      <div class="container">
+        <form class="login-form">
+          <div class="txt_and_about">
+            <h1>
+              <span>Login</span>
+              <span class="slash">/</span>
+              <span class="register_span">Register</span>
+            </h1>
+            <div class="r_g">
+              <i class="fas fa-info-circle login_open_tab"></i>
+            </div>
+          </div>
+          <div class="login_error">Hello error</div>
+          <div class="login_info">Enter used username if you have been here before or a set a new username to get started.</div>
+          <div class="input-field input-field_username">
+            <label for="username">
+              <span></span>
+            </label>
+            <div class="ic_in ic_in_username">
+              <i class="login__icon fas fa-user"></i>
+              <input pattern="[a-z_]+" title="Please use only small letters and underscores" type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="ic_in ic_in_password">
+              <i class="login__icon fas fa-lock fa-two"></i>
+              <input pattern="[a-z_]+" title="Please use only small letters and underscores" type="text" id="password" name="username" placeholder="Enter your Password" required>
+            </div>
+            <div class="ic_in ic_in_name">
+              <i class="login__icon fas fa-info-user fa-three"></i>
+              <input pattern="[a-z_]+" title="Please use only small letters and underscores" type="text" id="name" name="username" placeholder="Enter your Name" required>
+            </div>
+          </div>
+          <div class="continue ac_btn continue_btn_fb">
+            <i class="login__icon fas fa-arrow-left"></i>
+          </div>
+          <div class="continue ac_btn  continue_btn_backtousername">
+            <i class="login__icon fas fa-arrow-left"></i>
+          </div>
+          <div class="continue  ac_btn  continue_btn_backtopass">
+            <i class="login__icon fas fa-arrow-left"></i>
+          </div>
+          <div class="continue ac_btn  continue_btn_backtoname">
+            <i class="login__icon fas fa-arrow-left"></i>
+          </div>
+          <div class="continue ac_btn  continue_btn_f">
+            <i class="login__icon fas fa-arrow-right"></i>
+          </div>
+          <div class="continue ac_btn  continue_btn_login">
+            <i class="login__icon fas fa-arrow-right"></i>
+          </div>
+          <div class="continue ac_btn  continue_btn_signup_partial">
+            <i class="login__icon fas fa-arrow-right"></i>
+          </div>
+          <div class="continue ac_btn  continue_btn_signup_full">
+            <i class="login__icon fas fa-arrow-right"></i>
+          </div>
+        </form>
+      </div>
+      <div class="this_from">
+        <span>from</span>
+        <b class="this_from_guy">Furqan Elhhahie</b>
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <div id="dialogx" class="dialogx">
+        <div class="dialog-headerx">
+          <div class="tabs-containerx">
+            <div class="tabsx">
+              <button class="active-tabx">Upvoters</button>
+              <button>Language</button>
+              <button>Working</button>
+              <button>Database</button>
+              <button>Credits</button>
+            </div>
+          </div>
+          <span class="close-iconx">✕</span>
+        </div>
+        <div class="tab-contentx active-contentx">
+          <div class="a_title_anywgere">People who liked this code</div>
+          <p class="lit_p no__m">If you upvoted this code,your name will appear a few later in the list(scroll)</p>
+          <div class="sl_likers"></div>
+        </div>
+        <div class="tab-contentx">
+          <div class="a_title_anywgere">Frontend</div>
+          <div class="a_title_anywgere_txt">As you know I have used Html,css,js for frontend with a few required libraries</div>
+          <div class="a_title_anywgere">Backend</div>
+          <div class="a_title_anywgere_txt">This is the first time I worked with nodejs ,pretty cool and easy. </div>
+        </div>
+        <div class="tab-contentx">
+          <div class="a_title_anywgere">JWT(token) </div>
+          <div class="a_title_anywgere_txt">Login/signup is based on JWT authentication token that if validated on server will do things on behalf of the associated user </div>
+        </div>
+        <div class="tab-contentx">
+          <div class="a_title_anywgere">MongoDb</div>
+          <div class="a_title_anywgere_txt">First time I used mongodb so easy , I had made the code with sql ,database was provided by a free provider they deleted my account after trail ended so I heard of mongodb.</div>
+        </div>
+        <div class="tab-contentx">
+          <div class="a_title_anywgere">Furqan Elahie</div>
+          <div class="a_title_anywgere_txt"> My code yeah!(frontend+backend) </div>
+          <div class="a_title_anywgere">Volt</div>
+          <div class="a_title_anywgere_txt">Contributed in making poll card [frontend]</div>
+        </div>
+      </div>
+     </div>
+    <div class="polls_home_u">
+      <header class="sticky-header">
+        <div class="menu-icon menu_fa_icon_bars">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="polls-text"> Polls </div>
+        <div class="user-profile-icon">
+          <i class="fas fa-plus open_create_poll_x"></i>
+          <i class="fas fa-user-circle"></i>
+          <span class="my_name">User</span>
+        </div>
+      </header>
+      <div class="header-extension"></div>
+      <div class="search_div_op">
+        <div class="search_div">
+          <input id="searchInput" type="search" placeholder="Search" />
+          <button id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="search_res_cont">
+     <div id="search-results"></div>
+     </div>
+    
+      <div class="centered-dropdown-container">
+        <div class="custom-dropdown  custom_drop_downx">
+          <span id="selectedOption">
+            <span id="choosen_cat">Most Voted</span>
+            <i class="fas fa-chevron-down custom-select-icon"></i>
+          </span>
+          <div class="custom-dropdown-content">
+            <div class="custom-dropdown-item">Most Recent</div>
+            <div class="custom-dropdown-item">Most Voted</div>
+            <div class="custom-dropdown-item">My Voted</div>
+            <div class="custom-dropdown-item">My Polls</div>
+          </div>
+        </div>
+      </div>
+      <div id="pollContainer">
+<div class="gen_l_d vertical_center_x">
+           <div class="gen_loader"></div>
+       </div>
+        
+      </div>
+      <div class="ld_mr_div">
+        <div class="loader_ld_more"></div>
+      </div>
+      <div id="bottomSheetDialog" class="bottom_dialog_sheet">
+        <div class="bottom_dialog_sheet-header">
+          <div class="bottom_dialog_sheet-title">Voters</div>
+          <button id="closeDialogBtn" class="bottom_dialog_sheet-close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="bottom_dialog_sheet-content"></div>
+      </div>
+      <div id="featuresModal" class="features-modal">
+        <div class="features-modal-content">
+          <div class="features-modal-header">
+            <h2>Features <small class="scrolling_sp"> (scrollDown)</small>
+            </h2>
+            <span onclick="closeFeaturesModal()" class="close-icon close_features">
+              <i class="fas fa-times"></i>
+            </span>
+          </div>
+          <div class="features-list">
+            <div class="feature">
+              <i class="fas fa-user"></i> User Authentication for Real Login/Signup
+            </div>
+            <div class="feature">
+              <i class="fas fa-list-alt"></i> Explore Polls Created by Others
+            </div>
+            <div class="feature">
+              <i class="fas fa-bookmark"></i> Cast Votes on Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-pen"></i> Craft Your Own Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-percent"></i> Display Approximate Percentage Results
+            </div>
+            <div class="feature">
+              <i class="fas fa-trash"></i> Delete Your Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-eye"></i> See Who Voted on a Poll and Their Count
+            </div>
+            <div class="feature">
+              <i class="fas fa-check-circle"></i> Verification Badge for Approved Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-search"></i> Search for Specific Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-minus-square"></i> Unvote on a Poll If Necessary
+            </div>
+            <div class="feature">
+              <i class="fas fa-thumbs-up"></i> Like/Unlike Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-comment"></i> View and Comment on Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-eye"></i> Check Who Liked a Poll
+            </div>
+            <div class="feature">
+              <i class="fas fa-hashtag"></i> Add Tags to Your Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-flag"></i> Report Inappropriate Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-sort"></i> Browse Polls by Categories
+            </div>
+            <div class="feature">
+              <i class="fas fa-search-plus"></i> Auto Pagination for Likes, Voters, Comments, and Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-eye"></i> See How Many Polls You've Voted On
+            </div>
+            <div class="feature">
+              <i class="fas fa-list-alt"></i> Support for 4 or 2 Options in Polls
+            </div>
+            <div class="feature">
+              <i class="fas fa-eye"></i> View How Many Polls You've Posted
+            </div>
+            <div class="feature">
+              <i class="fas fa-trash"></i> You can delete your posted comments
+            </div>
+            <div class="feature">
+              <i class="fas fa-search"></i> While searching for a poll you will be able to see suggestions as well 
+            </div>
+            <small>Poll percentage results are rounded up so you may be able to see them adding upto more than 100% , it doesnot matter as all are  equally rounded off</small>
+         </div>
+        </div>
+        
+      </div>
+</html>
